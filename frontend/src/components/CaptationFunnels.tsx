@@ -5,7 +5,17 @@ interface CaptationFunnelsProps {
   onCtaClick: () => void;
 }
 
-export const CaptationFunnels: React.FC<CaptationFunnelsProps> = ({ onCtaClick }) => {
+export const CaptationFunnels: React.FC = () => {
+  const onCtaClick = () => {
+    const formSection = document.getElementById('diagnostico-gratuito');
+    if (formSection) {
+      formSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   const funnels = [
     {
       icon: <Target className="w-8 h-8 text-white" />,

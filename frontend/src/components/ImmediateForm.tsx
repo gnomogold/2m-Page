@@ -31,30 +31,29 @@ export const ImmediateForm: React.FC = () => {
     setIsSubmitting(true);
     
     try {
-      // Send form data to email
-      const emailData = {
-        to: 'sac2media@gmail.com',
-        subject: 'Novo Diagnóstico Agendado',
-        body: `
-          Nome e Sobrenome: ${formData.fullName}
-          E-mail: ${formData.email}
-          DDD + WhatsApp: ${formData.phone}
-          Instagram: ${formData.instagram}
-          Setor: ${formData.sector}
-          Faturamento Mensal: ${formData.revenue}
-        `
-      };
-      
-      // In a real implementation, you would send this to your backend
-      console.log('Form data to be sent:', emailData);
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // Redirect to thank you page
-      window.location.href = 'https://assessoria2media.com/obrigado-1/';
+      // Enviar dados para a API
+      const response = await fetch('http://localhost:3001/api/lead', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        // Sucesso - redirecionar para página de agradecimento
+        window.location.href = result.redirectUrl || 'https://assessoria2media.com/obrigado-1/';
+      } else {
+        // Erro da API
+        console.error('Erro da API:', result.message);
+        alert(`Erro: ${result.message}`);
+        setIsSubmitting(false);
+      }
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error('Erro ao enviar formulário:', error);
+      alert('Erro ao enviar formulário. Tente novamente.');
       setIsSubmitting(false);
     }
   };
@@ -82,7 +81,7 @@ export const ImmediateForm: React.FC = () => {
   }
 
   return (
-    <section className="py-20 bg-white">
+    <section id="diagnostico-gratuito" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">

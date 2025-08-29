@@ -5,7 +5,17 @@ interface TeamProps {
   onCtaClick: () => void;
 }
 
-export const Team: React.FC<TeamProps> = ({ onCtaClick }) => {
+export const Team: React.FC = () => {
+  const onCtaClick = () => {
+    const formSection = document.getElementById('diagnostico-gratuito');
+    if (formSection) {
+      formSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-6">

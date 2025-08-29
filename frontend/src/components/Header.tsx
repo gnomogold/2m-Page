@@ -5,7 +5,17 @@ interface HeaderProps {
   onCtaClick: () => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ onCtaClick }) => {
+export const Header: React.FC = () => {
+  const onCtaClick = () => {
+    const formSection = document.getElementById('diagnostico-gratuito');
+    if (formSection) {
+      formSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <section className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
       {/* Background Pattern */}

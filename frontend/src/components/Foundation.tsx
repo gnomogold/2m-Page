@@ -5,7 +5,17 @@ interface FoundationProps {
   onCtaClick: () => void;
 }
 
-export const Foundation: React.FC<FoundationProps> = ({ onCtaClick }) => {
+export const Foundation: React.FC = () => {
+  const onCtaClick = () => {
+    const formSection = document.getElementById('diagnostico-gratuito');
+    if (formSection) {
+      formSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <section className="py-20 bg-black text-white">
       <div className="container mx-auto px-6">

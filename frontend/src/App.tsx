@@ -8,22 +8,15 @@ import { CaptationFunnels } from './components/CaptationFunnels';
 import { Team } from './components/Team';
 
 export default function App() {
-  const scrollToForm = () => {
-    const formElement = document.getElementById('immediate-form');
-    if (formElement) {
-      formElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <div className="min-h-screen">
-      <Header onCtaClick={scrollToForm} />
+      <Header />
       <ImmediateForm />
       <PainPoints />
-      <Foundation onCtaClick={scrollToForm} />
-      <DirectSales onCtaClick={scrollToForm} />
-      <CaptationFunnels onCtaClick={scrollToForm} />
-      <Team onCtaClick={scrollToForm} />
+      <Foundation />
+      <DirectSales />
+      <CaptationFunnels />
+      <Team />
       
       <footer className="bg-black text-white py-8">
         <div className="container mx-auto px-6 text-center">
