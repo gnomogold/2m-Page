@@ -81,62 +81,62 @@ export const ImmediateForm: React.FC = () => {
   }
 
   return (
-    <section id="diagnostico-gratuito" className="py-20 bg-white">
-      <div className="container mx-auto px-6">
+    <section id="diagnostico-gratuito" className="py-12 sm:py-16 md:py-20 bg-white">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4 sm:mb-6">
               Pronto para virar o jogo? Comece com um diagnóstico gratuito.
             </h2>
-            <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
               Preencha o formulário abaixo para agendar sua <strong className="text-red-600">Sessão de Diagnóstico Estratégico</strong>. 
               Um de nossos especialistas vai analisar sua operação e desenhar um plano de ação para reverter o quadro de baixo lucro.
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div className="space-y-8">
-              <div className="flex items-start space-x-4">
-                <div className="bg-red-600 p-3 rounded-lg">
-                  <Clock className="w-8 h-8 text-white" />
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-start">
+            <div className="space-y-6 sm:space-y-8 order-2 lg:order-1">
+              <div className="flex items-start space-x-3 sm:space-x-4 bg-red-600/10 border border-red-600/30 p-4 sm:p-6 rounded-lg">
+                <div className="bg-red-600 p-2 sm:p-3 rounded-lg flex-shrink-0">
+                  <Clock className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-3 text-red-600">Diagnóstico Completo</h3>
-                  <p className="text-gray-700 text-lg">
-                    60 minutos analisando sua operação com um especialista que já ajudou 
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-red-600 ">Diagnóstico Completo</h3>
+                  <p className="text-gray-700 text-base sm:text-lg">
+                    Analisamos sua operação com um especialista que já ajudou 
                     centenas de deliveries a aumentarem o lucro.
                   </p>
                 </div>
               </div>
               
-              <div className="flex items-start space-x-4">
-                <div className="bg-red-600 p-3 rounded-lg">
-                  <Shield className="w-8 h-8 text-white" />
+              <div className="flex items-start space-x-3 sm:space-x-4 bg-red-600/10 border border-red-600/30 p-4 sm:p-6 rounded-lg">
+                <div className="bg-red-600 p-2 sm:p-3 rounded-lg flex-shrink-0">
+                  <Shield className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-3 text-red-600">100% Gratuito</h3>
-                  <p className="text-gray-700 text-lg">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-red-600">100% Gratuito</h3>
+                  <p className="text-gray-700 text-base sm:text-lg">
                     Sem compromisso. Mesmo que você não feche conosco, 
                     sairá da sessão com insights valiosos para implementar.
                   </p>
                 </div>
               </div>
               
-              <div className="bg-red-600/10 border border-red-600/30 p-6 rounded-lg">
-                <h4 className="text-xl font-bold text-red-600 mb-3">⚡ Vagas Limitadas</h4>
-                <p className="text-gray-800">
+              {/* <div className="bg-red-600/10 border border-red-600/30 p-4 sm:p-6 rounded-lg">
+                <h4 className="text-lg sm:text-xl font-bold text-red-600 mb-2 sm:mb-3">⚡ Vagas Limitadas</h4>
+                <p className="text-gray-800 text-sm sm:text-base">
                   Para garantir a qualidade do atendimento, aceitamos apenas 
                   <strong className="text-red-600"> 15 diagnósticos por semana</strong>.
                 </p>
-              </div>
+              </div> */}
             </div>
             
-            <form onSubmit={handleSubmit} className="bg-gradient-to-br from-black to-gray-900 p-8 rounded-2xl shadow-2xl border border-red-600/30">
-              <h3 className="text-3xl font-bold text-white mb-8 text-center">
+            <form onSubmit={handleSubmit} className="bg-gradient-to-br from-black to-gray-900 p-6 sm:p-8 rounded-2xl shadow-2xl border border-red-600/30 order-1 lg:order-2">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8 text-center">
                 Agende Seu Diagnóstico
               </h3>
               
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 <div>
                   <label htmlFor="fullName" className="block text-sm font-semibold text-gray-300 mb-2">
                     Nome e Sobrenome
@@ -148,7 +148,7 @@ export const ImmediateForm: React.FC = () => {
                     value={formData.fullName}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-600 bg-gray-800 text-white rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-colors"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-600 bg-gray-800 text-white rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-colors text-sm sm:text-base"
                     placeholder="Digite seu nome"
                   />
                 </div>
@@ -164,7 +164,7 @@ export const ImmediateForm: React.FC = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-600 bg-gray-800 text-white rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-colors"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-600 bg-gray-800 text-white rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-colors text-sm sm:text-base"
                     placeholder="Seu melhor e-mail"
                   />
                 </div>
@@ -180,7 +180,7 @@ export const ImmediateForm: React.FC = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-600 bg-gray-800 text-white rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-colors"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-600 bg-gray-800 text-white rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-colors text-sm sm:text-base"
                     placeholder="(11) 99999-9999"
                   />
                 </div>
@@ -195,7 +195,7 @@ export const ImmediateForm: React.FC = () => {
                     name="instagram"
                     value={formData.instagram}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-600 bg-gray-800 text-white rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-colors"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-600 bg-gray-800 text-white rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-colors text-sm sm:text-base"
                     placeholder="@ do seu delivery"
                   />
                 </div>
@@ -209,7 +209,7 @@ export const ImmediateForm: React.FC = () => {
                     name="revenue"
                     value={formData.revenue}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-600 bg-gray-800 text-white rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-colors"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-600 bg-gray-800 text-white rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-colors text-sm sm:text-base"
                   >
                     <option value="">Selecione uma opção</option>
                     <option value="ate-30k">Até R$30 mil</option>
@@ -226,20 +226,20 @@ export const ImmediateForm: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-red-600 hover:bg-red-700 disabled:bg-red-400 text-white text-lg font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-xl flex items-center justify-center space-x-2"
+                  className="w-full bg-red-600 hover:bg-red-700 disabled:bg-red-400 text-white text-base sm:text-lg font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-xl flex items-center justify-center space-x-2"
                 >
                   {isSubmitting ? (
-                    <div className="animate-spin w-6 h-6 border-2 border-white/30 border-t-white rounded-full"></div>
+                    <div className="animate-spin w-5 h-5 sm:w-6 sm:h-6 border-2 border-white/30 border-t-white rounded-full"></div>
                   ) : (
                     <>
-                      <Send className="w-5 h-5" />
-                      <span>AGENDAR MEU DIAGNÓSTICO GRATUITO</span>
+                      <Send className="w-4 h-4 sm:w-5 sm:h-5" />
+                      <span className="text-sm sm:text-base">AGENDAR MEU DIAGNÓSTICO GRATUITO</span>
                     </>
                   )}
                 </button>
               </div>
               
-              <p className="text-sm text-gray-400 text-center mt-4">
+              <p className="text-xs sm:text-sm text-gray-400 text-center mt-3 sm:mt-4">
                 Seus dados estão protegidos. Não enviamos spam.
               </p>
             </form>

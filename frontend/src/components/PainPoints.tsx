@@ -26,29 +26,31 @@ export const PainPoints: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6">
+    <section className="py-12 sm:py-16 md:py-20 bg-white">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4 sm:mb-6">
             Seu negócio sofre com algum destes sintomas?
           </h2>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
+        <div className="grid sm:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto mb-12 sm:mb-16">
           {symptoms.map((symptom, index) => (
             <div 
               key={index}
-              className="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-red-200 hover:shadow-xl transition-all duration-300"
+              className="bg-white p-6 sm:p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-red-200 hover:shadow-xl transition-all duration-300"
             >
-              <div className="flex items-start space-x-4">
+              <div className="flex items-start space-x-3 sm:space-x-4">
                 <div className="flex-shrink-0">
-                  {symptom.icon}
+                  <div className="w-8 h-8 sm:w-12 sm:h-12 flex items-center justify-center">
+                    {symptom.icon}
+                  </div>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-black mb-3">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-2 sm:mb-3">
                     {symptom.title}
                   </h3>
-                  <p className="text-gray-700 text-lg leading-relaxed">
+                  <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed">
                     {symptom.description}
                   </p>
                 </div>
