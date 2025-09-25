@@ -13,7 +13,7 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <section className="bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden lg:min-h-screen">
+    <section id="hero" className="bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden lg:min-h-screen">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-1/4 left-1/4 w-48 sm:w-64 md:w-96 h-48 sm:h-64 md:h-96 bg-red-600 rounded-full blur-3xl"></div>

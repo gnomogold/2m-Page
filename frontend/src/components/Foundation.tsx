@@ -1,9 +1,5 @@
 import React from 'react';
-import { Calculator, FileText, TrendingUp } from 'lucide-react';
-
-interface FoundationProps {
-  onCtaClick: () => void;
-}
+import { Calculator, FileText } from 'lucide-react';
 
 export const Foundation: React.FC = () => {
   const onCtaClick = () => {
@@ -17,7 +13,7 @@ export const Foundation: React.FC = () => {
   };
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 bg-black text-white">
+    <section id="foundation" className="py-12 sm:py-16 md:py-20 bg-black text-white">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">

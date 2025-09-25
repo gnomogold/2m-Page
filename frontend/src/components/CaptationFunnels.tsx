@@ -93,7 +93,7 @@ export const CaptationFunnels: React.FC = () => {
   }, [isHovered, funnels.length]);
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white relative overflow-hidden">
+    <section id="captation-funnels" className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-1/4 right-1/4 w-48 sm:w-64 md:w-96 h-48 sm:h-64 md:h-96 bg-red-600 rounded-full blur-3xl"></div>

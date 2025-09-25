@@ -1,7 +1,7 @@
-import React from 'react';
 import { Header } from './components/Header';
 import { ImmediateForm } from './components/ImmediateForm';
 import { PainPoints } from './components/PainPoints';
+import { IADelivery } from './components/IaDelivery';
 import { Foundation } from './components/Foundation';
 import { DirectSales } from './components/DirectSales';
 import { CaptationFunnels } from './components/CaptationFunnels';
@@ -13,12 +13,21 @@ export default function App() {
       <Header />
       <ImmediateForm />
       <PainPoints />
+      <IADelivery onCtaClick={() => {
+        const formSection = document.getElementById('diagnostico-gratuito');
+        if (formSection) {
+          formSection.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }} />
       <Foundation />
       <DirectSales />
       <CaptationFunnels />
       <Team />
       
-      <footer className="bg-black text-white py-6 sm:py-8">
+      <footer id="footer" className="bg-black text-white py-6 sm:py-8">
         <div className="container mx-auto px-4 sm:px-6 text-center">
           <p className="text-sm sm:text-base text-gray-400">
             Copyright © 2025 Inc. Todos os direitos reservados. 2 Media.

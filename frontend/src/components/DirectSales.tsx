@@ -1,10 +1,6 @@
 import React from 'react';
 import { Smartphone, Heart, Target, MessageCircle, Users, TrendingUp, Zap } from 'lucide-react';
 
-interface DirectSalesProps {
-  onCtaClick: () => void;
-}
-
 export const DirectSales: React.FC = () => {
   const onCtaClick = () => {
     const formSection = document.getElementById('diagnostico-gratuito');
@@ -17,7 +13,7 @@ export const DirectSales: React.FC = () => {
   };
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 bg-white">
+    <section id="direct-sales" className="py-12 sm:py-16 md:py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4 sm:mb-6">
